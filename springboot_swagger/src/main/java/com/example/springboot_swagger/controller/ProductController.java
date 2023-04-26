@@ -18,7 +18,7 @@ public class ProductController {
 
     @ApiOperation(value = "获取产品详情信息")
     @GetMapping("/getProductDetail")
-    @ApiImplicitParam(name = "pid", value = "产品id", paramType = "String")
+    @ApiImplicitParam(name = "pid", value = "产品id", paramType = "String")  // 通过@ApiImplicitParam注解设置参数名，描述和参数类型
     public BaseResponse<ProductDetailBO> getProductDetail(@RequestParam(value = "pid") String pid) {
         return RespGenerator.returnOK("成功");
     }
